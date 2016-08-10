@@ -23,6 +23,7 @@ git clone https://github.com/scrooloose/syntastic.git
 git clone https://github.com/flazz/vim-colorschemes.git colorschemes
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/ctrlp.vim
+git clone https://github.com/VundleVim/Vundle.vim.git
 
 # set up your vimrc
 cd ~/.vim
@@ -47,6 +48,15 @@ echo "    set t_Co=256" 			>> vimrc
 echo "    colorscheme hybrid-light" >> vimrc
 echo "endif" 						>> vimrc
 
+echo "set nocompatible" >> vimrc                                                   
+echo "filetype off" >> vimrc                                                                           
+echo "set rtp+=~/.vim/bundle/Vundle.vim" >> vimrc                                                      
+echo "call vundle#begin()" >> vimrc                                                                    
+echo "Plugin 'posva/vim-vue'" >> vimrc                                                                 
+echo "call vundle#end()" >> vimrc                                                                      
+                                                                                   
+echo "syntax on" >> vimrc                                                                              
+echo "set exrc" >> vimrc   
 
 # now setup tmux
 cd
